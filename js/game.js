@@ -22,21 +22,18 @@
       this.gameScreen.style.height = `${this.height}px`;
       this.gameScreen.style.width = `${this.width}px`;
       this.gameScreen.style.display = 'block';
-
+      const enemy =  new Enemy(this.gameScreen)
+      this.enemies.push(enemy)
+      enemy.Lasertimer();
       this.gameIntervalId = setInterval(() => {
         this.gameloop();
-        this.counter++;
-        if(this.counter % 200 === 0){
-          const enemy =  new Enemy(this.gameScreen)
-            this.enemies.push(enemy)
-            enemy.Lasertimer();
-        }
+
+         }, this.gameLoopFrequency);
         
-    }, this.gameLoopFrequency);
-    }
-    
-    
+ 
+        }
     gameloop() {
+      // console.log("gameloop")
       this.update();
 
       for (let i = 0; i < this.enemies.length; i++) {
@@ -61,7 +58,7 @@
 }
     
     update() {
-      // console.log('this is the game update');
+      console.log('this is the game update');
       this.player.move();
     }
     

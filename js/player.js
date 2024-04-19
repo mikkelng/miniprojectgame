@@ -17,8 +17,10 @@
       this.speed = 3;
     }
     move() {    
+      // console.log("move")
         this.top += this.directionY;
         if (this.top < 200) {
+          // console.log("in if")
           this.top = 200;
         }
         if (this.top > this.gameScreen.offsetHeight - this.height - 10) {

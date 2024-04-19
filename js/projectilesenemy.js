@@ -5,7 +5,7 @@ class Laser {
         this.width = 25;
         this.height = 15;
         this.top = this.enemy.top + this.enemy.height / 2;
-        this.left = this.enemy.left - this.enemy.width;
+        this.left = this.enemy.left - this.enemy.width +100;
         this.element = document.createElement("img");
         this.element.src = "../images/laser.png";
         this.element.style.position = "absolute";
@@ -19,11 +19,11 @@ class Laser {
       move() {
         this.left += -3;
         this.updatePosition();
-        console.log("moving");
+        // console.log("moving");
       }
     
       updatePosition() {
         this.element.style.left = `${this.left}px`;
-        console.log("updating");
+        // console.log("updating");
       }
     }
