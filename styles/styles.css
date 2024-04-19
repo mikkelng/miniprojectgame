@@ -3,30 +3,23 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
 }
 
 #btn {
-  appearance: none;
+  height: 55px;
+  box-sizing: border-box;
   background-color: #FFFFFF;
   border-radius: 640px;
   border-style: none;
   box-shadow: #ADCFFF 0 -12px 6px inset;
-  box-sizing: border-box;
   color: #000000;
   cursor: pointer;
-  display: inline-block;
-  font-family: sans-serif; /*CHANGE*/
-  font-size: 20px;
+  font-family: "Pixelify Sans", sans-serif;
   font-weight: 700;
-  letter-spacing: -.24px;
-  margin: 0;
+  margin: auto;
   outline: none;
-  padding: 16px 20px;
-  quotes: auto;
   text-align: center;
   text-decoration: none;
   transition: all .15s;
@@ -52,21 +45,55 @@ body {
   }
 }
 
-/*#game-result {
-  
-}
-*/
-
 #game-container {
-    width: 1200px;
-    height: 600px;
-    background-color: white;
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-#game-screen{
-    width: 100%; 
-    height: 100%; 
-    background-image: url('../images/pixelforest.png');
-    background-size: cover;
-    background-position: center;
+#game-name {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 700;
+  color: #000000;
+  -webkit-text-stroke: 2px #FFFFFF;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+#game-screen {
+  width: 100%; 
+  height: 100%; 
+  background-image: url('../images/pixelforest.png');
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+#game-result {
+  font-family: "Jersey 10", sans-serif;
+  font-size: 40px;
+  margin: 10px auto;
+}
+
+#start-button {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 50px;
+  padding: 6px 40px;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Jersey 10", sans-serif;
+  color:#FFFFFF;
+  transition: all 0.2s;
+  margin: 5px auto;
+}
+
+#start-button:hover{
+  color: #000000;
+  background-color: #FFFFFF;
 }
